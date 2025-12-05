@@ -18,8 +18,9 @@ svg.icon {
 	padding: 0.15em;
 	vertical-align: text-bottom;
 
-	&.mana {
-		background-color: #ccc;
+	&.mana,
+	&.action {
+		background-color: rgb(204 194 192);
 		border-radius: 100%;
 	}
 
@@ -29,6 +30,26 @@ svg.icon {
 	&.mana.red { background-color: rgb(235 159 130); }
 	&.mana.white { background-color: rgb(248 231 185); }
 	&.mana.colorless { background-color: rgb(204 194 192); }
+
+	&.tap { padding: 0.2em 0.1em 0.1em 0.2em; }
+}
+
+.icon2 {
+	display: inline-block;
+	width: 0.85em;
+	height: 0.85em;
+	padding: 0.15em;
+	vertical-align: text-bottom;
+
+	&.mana {
+		background-color: rgb(204 194 192);
+		border-radius: 100%;
+	}
+
+	&.mana.white {
+		background-image: url(iconset.svg#icon-tap);
+
+	}
 }
 
 .container {
@@ -95,3 +116,5 @@ html[lang="de"] {
 	span[lang="de"] { display: inline; }
 	*[lang="en"] { display: none; }
 }
+
+footer .version { display: none; }
