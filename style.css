@@ -1,4 +1,8 @@
 
+:root {
+	--git-commit: '<!-- VERSION_PLACEHOLDER -->';
+}
+
 html {
 	font: 100%/1.4 system-ui, sans-serif;
 	background-color: #ccc;
