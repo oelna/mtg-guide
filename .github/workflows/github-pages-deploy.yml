@@ -26,8 +26,8 @@ jobs:
       - name: Inject commit SHA into HTML
         run: |
           SHORT_SHA=${GITHUB_SHA::7}
-          find . -name '*.html' -print0 \
-            | xargs -0 sed -i "s|<!-- VERSION_PLACEHOLDER -->|<span>${SHORT_SHA}</span>|g"
+          find . -name '*.html' -o -name '*.css' -print0 \
+            | xargs -0 sed -i "s|<!-- VERSION_PLACEHOLDER -->|${SHORT_SHA}|g"
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
